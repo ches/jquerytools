@@ -56,7 +56,7 @@ test("should set the proper date value for format yyyy-mm-dd", function(){
   $dateInput = $("#date").dateinput({format:'yyyy-mm-dd'}).click();
   
   var today = new Date,
-    month = zeropad(today.getUTCMonth()),
+    month = zeropad(zeropad(today.getMonth()+1)),
     day = zeropad(1), // Choose the 1st of this month
     year = today.getFullYear();
     
