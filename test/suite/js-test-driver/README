@@ -1,0 +1,17 @@
+In order to run js-test-driver, you must have a Java 1.6 runtime available to you (it fails with 1.5)
+
+All commands listed should be run from the root js-test-driver directory
+
+To start the js-test-driver server run:
+
+  java -jar lib/JsTestDriver-1.3.2.jar --port 9876
+  
+Then, to capture a particular browser, load up http://localhost:9876 in your browser
+
+Click the link "Capture this browser"
+
+Then, start the test client using:
+
+  java -jar lib/JsTestDriver-1.3.2.jar --tests all
+  
+If you run into any issues, start both server and client with the --runnerMode=DEBUG_NO_TRACE flag to see output errors
