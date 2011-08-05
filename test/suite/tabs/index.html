@@ -3,13 +3,14 @@
   <head>
   <title>Tabs Test</title>
   <link rel="stylesheet" type="text/css" href="../lib/stylesheets/jasmine.css">
+  <link rel="stylesheet" type="text/css" href="css/tabs.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script type="text/javascript" src="../lib/javascripts/jasmine.js"></script>
   <script type="text/javascript" src="../lib/javascripts/jasmine-html.js"></script>
   <script type="text/javascript" src="../support/SpecHelper.js"></script>
   
-  <script type="text/javascript" src="../../src/tabs/tabs.js"></script>
-  <script type="text/javascript" src="../support/SpecHelper.js"></script>
+  <script type="text/javascript" src="../../../src/toolbox/toolbox.expose.js"></script>
+  <script type="text/javascript" src="../../../src/tabs/tabs.js"></script>
   <script type="text/javascript" src="TabsSpec.js"></script>
   
   <script type="text/javascript">
@@ -22,18 +23,37 @@
 </head>
 <body>
   
-  <!-- the tabs -->
-  <ul class="tabs">
-  	<li><a href="#">Tab 1</a></li>
-  	<li><a href="#">Tab 2</a></li>
-  	<li><a href="#">Tab 3</a></li>
-  </ul>
+  <div id="minimal">
+    <!-- the tabs -->
+    <ul class="tabs">
+    	<li><a href="#">Tab 1</a></li>
+    	<li><a href="#">Tab 2</a></li>
+    	<li><a href="#">Tab 3</a></li>
+    </ul>
 
-  <!-- tab "panes" -->
-  <div class="panes">
-  	<div>pane 1 content</div>
-  	<div>pane 2 content</div>
-  	<div>pane 3 content</div>
+    <!-- tab "panes" -->
+    <div class="panes">
+    	<div>pane 1 content</div>
+    	<div>pane 2 content</div>
+    	<div>pane 3 content</div>
+    </div>
+  </div>
+  
+  <div id="wizard">
+
+  	<!-- tabs -->
+  	<ul class="tabs">
+  		<li><a href="#" class="w2">Personal info</a></li>
+  		<li><a href="#" class="w2">Shopping basket</a></li>
+  		<li><a href="#" class="w2">Review order</a></li>
+  	</ul>
+
+  	<!-- panes -->
+  	<div class="panes">
+  		<div> .. the form   .. </div>
+  		<div> .. the basket .. </div>
+  		<div> .. the order  .. </div>
+  	</div>
   </div>
 
 </body>
