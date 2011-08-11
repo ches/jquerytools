@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Tabs Wizard</title>
+  <link rel="stylesheet" type="text/css" href="css/tabs.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  
+  <script type="text/javascript" src="../../src/toolbox/toolbox.expose.js"></script>
+  <script type="text/javascript" src="../../src/tabs/tabs.js"></script>
+  
+  <script type="text/javascript">
+    $(function(){
+
+      var wizard = $("#wizard").expose({color: '#789', lazy: true});
+
+    	// enable exposing on the wizard
+    	wizard.click(function() {
+    		$(this).expose().load();
+    	});
+
+    	$("ul.tabs", wizard).tabs("div.panes > div");
+
+    });
+  </script>
+</head>
+<body>
+  
+  <h1>Wizard</h1>
+  <div id="wizard">
+  	<!-- tabs -->
+  	<ul class="tabs">
+  		<li><a href="#" class="w2">Personal info</a></li>
+  		<li><a href="#" class="w2">Shopping basket</a></li>
+  		<li><a href="#" class="w2">Review order</a></li>
+  	</ul>
+
+  	<!-- panes -->
+  	<div class="panes">
+  		<div> .. the form   .. </div>
+  		<div> .. the basket .. </div>
+  		<div> .. the order  .. </div>
+  	</div>
+  </div>
+
+</body>
+</html>
