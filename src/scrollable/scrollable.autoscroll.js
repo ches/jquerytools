@@ -66,6 +66,8 @@
       };
 
       // when stopped - mouseover won't restart
+      // This isn't actually true (and hasn't been true in the past)
+      // Will implement if there's an overwhelming case for it
       api.stop = function() {
         api.pause();
       };
