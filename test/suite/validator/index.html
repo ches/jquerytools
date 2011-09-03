@@ -6,6 +6,7 @@
   <script type="text/javascript" src="../../js/jquery-1.6.2.js"></script>
   <script type="text/javascript" src="../lib/javascripts/jasmine.js"></script>
   <script type="text/javascript" src="../lib/javascripts/jasmine-html.js"></script>
+  <script type="text/javascript" src="../lib/javascripts/jasmine-jquery/lib/jasmine-jquery.js"></script>
   <script type="text/javascript" src="../support/SpecHelper.js"></script>
 
   <script type="text/javascript" src="../../../src/validator/validator.js"></script>
@@ -13,6 +14,8 @@
 
   <script type="text/javascript">
     $(function(){
+      jasmine.getFixtures().fixturesPath = 'fixtures';
+
       // Start Jasmine Tests
       jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
       jasmine.getEnv().execute();
