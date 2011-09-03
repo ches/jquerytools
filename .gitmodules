@@ -1,3 +1,6 @@
 [submodule "test/suite/lib/javascripts/jasmine-jquery"]
 	path = test/suite/lib/javascripts/jasmine-jquery
 	url = git://github.com/velesin/jasmine-jquery.git
+[submodule "test/suite/lib/javascripts/jasmine"]
+	path = test/suite/lib/javascripts/jasmine
+	url = git://github.com/pivotal/jasmine.git
