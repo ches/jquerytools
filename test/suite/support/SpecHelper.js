@@ -1,8 +1,8 @@
 beforeEach(function() {
   this.addMatchers({
-    toBePositionedAt: function(left, top) {
-      var $dateWindow = $(this.actual);
-      return $dateWindow.offset().left == left && $dateWindow.offset().top == top;
+    toBePositionedAt: function(top, left) {
+      var $element = $(this.actual);
+      return $element.offset().left == left && $element.offset().top == top;
     }
   });
 });

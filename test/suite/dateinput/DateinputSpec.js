@@ -123,13 +123,15 @@ describe('Dateinput', function() {
         expect(dateinput.getCalendar()).toBeVisible();
       });
 
-      it('positions the date window properly', function() {
+      it('positions the date window according to offset config', function() {
         dateinput = $input.dateinput({offset: [35, 22]}).data('dateinput');
+        var offset = dateinput.getConf().offset;
 
-        var left = $input.offset().left,
-            top = $input.offset().top + $input.outerHeight({margins:true});
+        var left = $input.offset().left + offset[1],
+            top = $input.offset().top + $input.outerHeight({margins:true}) + offset[0];
 
-        expect(dateinput.getCalendar()).toBePositionedAt(left, top);
+        dateinput.getInput().focus();
+        expect(dateinput.getCalendar()).toBePositionedAt(top, left);
       });
     });
   });
