@@ -90,13 +90,16 @@ describe('Dateinput', function() {
         xit('does not allow date selection');
       });
 
-      // TODO: these ought to have public API getters IMO
-      xit('sets min config value from attr', function() {
+      it('sets min config value from attr', function() {
+        setFixtures('<input type="date" min="2004-02-20" />');
         dateinput = $(':date[min]').dateinput().data('dateinput');
+        expect(dateinput.getMin()).toEqual(new Date(2004, 1, 20));
       });
 
-      xit('sets max config value from attr', function() {
+      it('sets max config value from attr', function() {
+        setFixtures('<input type="date" max="2020-02-20" />');
         dateinput = $(':date[max]').dateinput().data('dateinput');
+        expect(dateinput.getMax()).toEqual(new Date(2020, 1, 20));
       });
 
       it('value attr sets input and dateinput value', function() {

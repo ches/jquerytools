@@ -678,6 +678,14 @@
 			getCalendar: function() {
 				return root;	
 			},
+
+			getMin: function() {
+				return min;
+			},
+
+			getMax: function() {
+				return max;
+			},
 			
 			getValue: function(dateFormat) {
 				return dateFormat ? format(value, dateFormat, conf.lang) : value;	
